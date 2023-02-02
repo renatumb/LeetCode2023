@@ -15,4 +15,16 @@ public class IsSubsequence {
         }
         return false;
     }
+
+    public boolean isSubsequence2(String s, String t) {
+        int indexS = 0;
+        if (s.length() == 0) return true;
+        for (int i = 0; i < t.length(); i++) {
+            if (t.charAt(i) == s.charAt(indexS)) {
+                indexS++;
+                if (indexS > s.length() - 1) return true;
+            }
+        }
+        return false;
+    }
 }
