@@ -18,4 +18,16 @@ public class MiddleLinkedList {
         }
         return head;
     }
+
+    public ListNode middleNode2(ListNode head) {
+        ListNode fast = head, slow = head;
+
+        if (head == null || head.next == null) return head;
+
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
 }
