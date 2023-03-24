@@ -13,9 +13,8 @@ public class ReverseString {
     public static void reverseString(char[] s) {
         int i = 0;
         int j = s.length - 1;
-        int middle = s.length / 2;
 
-        while (i < middle) {
+        while (i < j) {
             char tmp = s[i];
             s[i] = s[j];
             s[j] = tmp;
